@@ -1,0 +1,18 @@
+<br>
+<section id="main">
+    <div *ngFor="let c of cart">
+        <p>
+            <img [src]="c.book.pic" height="100" width="100">
+            {{c.book.name}}
+            <br>
+            Author:{{c.book.author}}
+            <br>
+            {{c.book.price | currency}}|
+            {{c.book.likes}}<i class="fa fa-thumbs-up"
+             aria-hidden="true"></i>
+            <br>
+            Quantity:{{c.quantity}}|
+            Total Price:{{((c.quantity)*(c.book.price??0))| currency}}
+        </p>
+    </div>
+</section>

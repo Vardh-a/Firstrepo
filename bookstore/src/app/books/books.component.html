@@ -1,0 +1,24 @@
+<br>
+<section id="main">
+    <div *ngFor="let d of books">
+        <img [src]="d.pic" height="200" width="200">
+        <p>
+            {{d.name}} 
+            <br>
+            {{d.author}}
+            <br>
+            {{d.price | currency}}|{{d.likes}}<i class="fa fa-thumbs-up" aria-hidden="true"(click)="like(d.id)"></i>
+            <br>
+            Quantity: {{d.qty}}
+            <br>
+            <span *ngIf="(d.qty!=0)">
+             <button ngClass="btn btn-success"(click)="buy(d.id)">Add to Cart</button>
+            </span> 
+        </p>
+      </div>
+      <section id="carticon">
+        {{count}}
+       <i class="fa fa-shopping-cart" aria-hidden="true"(click)="goToCart()"></i>
+    </section>
+</section>
+  

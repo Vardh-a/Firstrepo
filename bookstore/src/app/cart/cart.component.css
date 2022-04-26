@@ -1,0 +1,19 @@
+div{
+    margin: 10px;
+    border: 1px rgba(148, 139, 231, 0.589) solid;
+    background-color: rgb(139, 240, 243);
+    padding: 5px;
+    float: left;
+    transition: all 0.5s ease;  
+}
+div:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px rgb(201, 5, 250);
+}
+#main{
+    border: 1px beige solid;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: 1500px;
+}
